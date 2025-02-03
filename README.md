@@ -1,36 +1,100 @@
-This is a [Next.js](https://nextjs.org) project bootstrapped with [`create-next-app`](https://nextjs.org/docs/app/api-reference/cli/create-next-app).
+# Task Manager - README
 
-## Getting Started
+## Overview
 
-First, run the development server:
+The Task Manager is a simple application built with **Next.js**, **MongoDB**, and modern web technologies. It allows users to manage tasks by creating, updating, and deleting them. The application is built with a clean and interactive UI that utilizes smooth animations for a better user experience. All data is stored in a MongoDB database, and the application follows the latest Next.js features like **Server Actions** and **Client Components** to handle data operations.
+
+### Features:
+- Add tasks with a title (optional description and due date).
+- Mark tasks as completed.
+- Delete tasks.
+- Smooth animations for UI updates.
+- Tasks are stored and managed in MongoDB.
+
+## Tech Stack
+
+- **Frontend**: React (Next.js), Tailwind CSS, Motion (for animations)
+- **Backend**: Next.js API routes, MongoDB (for data storage)
+- **Database**: MongoDB
+- **UI Components**: Custom components using Tailwind CSS
+
+## Setup Instructions
+
+### Prerequisites
+
+Ensure you have the following installed on your machine:
+- **Node.js** (version 16 or higher)
+- **MongoDB** (you can use a cloud service like MongoDB Atlas or set up a local instance)
+- **npm** or **yarn** (for managing dependencies)
+
+### 1. Clone the Repository
+
+Clone the project from GitHub:
+
+```bash
+git clone https://github.com/yourusername/task-manager.git
+cd task-manager
+```
+
+### 2. Install Dependencies
+
+Install the required dependencies using `npm` or `yarn`:
+
+```bash
+npm install
+# or
+yarn install
+```
+
+### 3. Set Up Environment Variables
+
+Create a `.env.local` file in the root of your project and add your MongoDB connection string:
+
+```env
+MONGODB_URI=mongodb+srv://<username>:<password>@cluster0.mongodb.net/taskmanager?retryWrites=true&w=majority
+```
+
+If you're using a local MongoDB instance, the URI will look like this:
+
+```env
+MONGODB_URI=mongodb://localhost:27017/taskmanager
+```
+
+### 4. Run the Development Server
+
+To start the application in development mode, run:
 
 ```bash
 npm run dev
 # or
 yarn dev
-# or
-pnpm dev
-# or
-bun dev
 ```
 
-Open [http://localhost:3000](http://localhost:3000) with your browser to see the result.
+Your application will be available at `http://localhost:3000`.
 
-You can start editing the page by modifying `app/page.tsx`. The page auto-updates as you edit the file.
+### 5. Database Setup
 
-This project uses [`next/font`](https://nextjs.org/docs/app/building-your-application/optimizing/fonts) to automatically optimize and load [Geist](https://vercel.com/font), a new font family for Vercel.
+If you don't have MongoDB set up yet, you can create a new MongoDB cluster on **MongoDB Atlas** or use a local instance. The app will automatically create the necessary database and collection (`taskmanager` and `tasks`) on the first run.
 
-## Learn More
+### 6. Using the Application
 
-To learn more about Next.js, take a look at the following resources:
+- Once the app is running, navigate to the homepage.
+- You will see an input field to add new tasks.
+- Tasks will be listed with options to mark them as completed or delete them.
+- Tasks will persist in the database even after the page is refreshed.
 
-- [Next.js Documentation](https://nextjs.org/docs) - learn about Next.js features and API.
-- [Learn Next.js](https://nextjs.org/learn) - an interactive Next.js tutorial.
+## Directory Structure
 
-You can check out [the Next.js GitHub repository](https://github.com/vercel/next.js) - your feedback and contributions are welcome!
+- **app**: Contains the application’s core logic and UI components.
+- **components**: UI components like buttons, inputs, and cards.
+- **lib**: Contains database connections and utility functions.
+- **actions**: Server-side functions to handle adding, updating, and deleting tasks.
+- **pages**: Next.js pages that define the app’s routing.
 
-## Deploy on Vercel
+## Contributing
 
-The easiest way to deploy your Next.js app is to use the [Vercel Platform](https://vercel.com/new?utm_medium=default-template&filter=next.js&utm_source=create-next-app&utm_campaign=create-next-app-readme) from the creators of Next.js.
+If you'd like to contribute to this project, feel free to fork the repository, make changes, and create a pull request.
 
-Check out our [Next.js deployment documentation](https://nextjs.org/docs/app/building-your-application/deploying) for more details.
+## License
+
+This project is licensed under the MIT License.
