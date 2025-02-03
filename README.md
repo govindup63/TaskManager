@@ -16,7 +16,7 @@ The Task Manager is a simple application built with **Next.js**, **MongoDB**, an
 - **Frontend**: React (Next.js), Tailwind CSS, Motion (for animations)
 - **Backend**: Next.js API routes, MongoDB (for data storage)
 - **Database**: MongoDB
-- **UI Components**: Custom components using Tailwind CSS
+- **UI Components**: Shadcn and Framer-motion along with tailwind
 
 ## Setup Instructions
 
